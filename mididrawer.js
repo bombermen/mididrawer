@@ -67,15 +67,6 @@ function MidiDrawer(midiFile) {
 		return null;
 	}
 
-	function getLastOccurence(track, noteNumber) {
-		for (var i = track.length - 1; i >= 0; --i) {
-			if (track[i].noteNumber == noteNumber) {
-				return track[i];
-			}
-		}
-		return {end: 0};
-	}
-	
 	function draw(type) {
 		context.clearRect(0, 0, canvas.width, canvas.height);
 
